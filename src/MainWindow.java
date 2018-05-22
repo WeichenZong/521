@@ -35,7 +35,7 @@ public class MainWindow extends JFrame {
 
 		Decoder decoder = Base64.getDecoder();
 		try {
-			graphics.drawString(new String(decoder.decode("SSBsb3ZlIHlvdSANClJ1aXhpbg=="), "UTF-8"), 70, 140);
+			graphics.drawString(new String(decoder.decode("SSBsb3ZlIE1hdGgNCg=="), "UTF-8"), 85, 140);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
