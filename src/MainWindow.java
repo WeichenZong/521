@@ -1,9 +1,11 @@
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Shape;
+import java.awt.Toolkit;
 import java.awt.geom.GeneralPath;
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
@@ -16,6 +18,8 @@ public class MainWindow extends JFrame {
 	public static void main(String[] args) {
 		MainWindow mainWindow = new MainWindow();
 		mainWindow.setVisible(true);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		mainWindow.setLocation(dim.width/2-mainWindow.getSize().width/2, dim.height/2-mainWindow.getSize().height/2);
 	}
 
 	public MainWindow() {
