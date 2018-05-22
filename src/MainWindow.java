@@ -30,12 +30,12 @@ public class MainWindow extends JFrame {
 		Graphics2D graphics = (Graphics2D) arg0;
 		graphics.setColor(Color.RED);
 		graphics.fill(getShape(0, 0));
-		graphics.setFont(new Font("华文行楷", Font.PLAIN, 28));
+		graphics.setFont(new Font("华文行楷", Font.PLAIN, 18));
 		graphics.setColor(Color.WHITE);
 
 		Decoder decoder = Base64.getDecoder();
 		try {
-			graphics.drawString(new String(decoder.decode("SSBMb3ZlIFlvdQ=="), "UTF-8"), 80, 140);
+			graphics.drawString(new String(decoder.decode("SSBsb3ZlIHlvdSANClJ1aXhpbg=="), "UTF-8"), 70, 140);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
