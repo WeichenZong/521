@@ -38,11 +38,21 @@ public class MainWindow extends JFrame {
 		graphics.setColor(Color.WHITE);
 
 		Decoder decoder = Base64.getDecoder();
+		String string = null,str = null;
 		try {
-			graphics.drawString(new String(decoder.decode("SSBsb3ZlIE1hdGgNCg=="), "UTF-8"), 85, 140);
+			string = new String(decoder.decode("U1NCc2IzWmxJRTFoZEdnTkNnPT0="),"UTF-8");
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			str = new String(decoder.decode(string),"UTF-8");
 		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		graphics.drawString(str, 85, 140);
 
 
 	}
